@@ -60,7 +60,7 @@ class OperationManager{
         opr4.addDependency(opr2)
         
         customQueue.addOperations([opr1, opr2, opr3, opr4, opr5, opr6], waitUntilFinished: true)
-        customQueue.waitUntilAllOperationsAreFinished()
+//        customQueue.waitUntilAllOperationsAreFinished()
     }
     
 }

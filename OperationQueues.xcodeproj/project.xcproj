@@ -13,12 +13,14 @@
   "files": [
     { "kind": "folder", "path": "OperationQueues", "target-membership": [ "OperationQueues" ] },
     { "kind": "folder", "path": "OperationQueues_Task2", "target-membership": [ "OperationQueues_Task2" ] },
+    { "kind": "folder", "path": "OperationQueues_Task3", "target-membership": [ "OperationQueues_Task3" ] },
     {
       "kind": "group",
       "name": "Products",
       "children": [
         { "path": "<PRODUCTS>/OperationQueues", "id": "925ADCE03097D1F300004EFA", "type": "compiled.mach-o.executable", "index": false },
         { "path": "<PRODUCTS>/OperationQueues_Task2", "id": "925ADCED3098E90800004EFA", "type": "compiled.mach-o.executable", "index": false },
+        { "path": "<PRODUCTS>/OperationQueues_Task3", "id": "925ADCF73098EF9E00004EFA", "type": "compiled.mach-o.executable", "index": false },
       ],
     },
   ],
@@ -51,6 +53,30 @@
       "name": "OperationQueues_Task2",
       "id": "925ADCEC3098E90800004EFA",
       "product": "Products/OperationQueues_Task2",
+      "product-type": "tool",
+      "build-phases": [
+        "compile-sources",
+        "frameworks",
+        {
+          "kind": "copy",
+          "name": "Copy Files",
+          "relative-path": "/usr/share/man/man1/",
+          "scope": "install",
+        },
+      ],
+      "build-settings": {
+        "CODE_SIGN_STYLE": "Automatic",
+        "DEVELOPMENT_TEAM": "K5U9R7Y574",
+        "ENABLE_HARDENED_RUNTIME": "YES",
+        "PRODUCT_NAME": "$(TARGET_NAME)",
+        "SWIFT_APPROACHABLE_CONCURRENCY": "YES",
+        "SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY": "YES",
+        "SWIFT_VERSION": "5.0",
+      },
+    }, {
+      "name": "OperationQueues_Task3",
+      "id": "925ADCF63098EF9E00004EFA",
+      "product": "Products/OperationQueues_Task3",
       "product-type": "tool",
       "build-phases": [
         "compile-sources",
